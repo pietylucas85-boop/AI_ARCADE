@@ -1,0 +1,55 @@
+services:
+  # --- Game 1 API (Python) ---
+  - type: web
+    name: connect4-api
+    env: python
+    plan: free
+    buildCommand: pip install -r ConnectFour/requirements.txt
+    startCommand: uvicorn ConnectFour.api_server:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PORT
+        value: 10000
+
+  # --- Game 1 Frontend (React) ---
+  - type: web
+    name: connect4-web
+    env: node
+    plan: free
+    buildCommand: cd ConnectFour/frontend && npm install && npm run build
+    startCommand: cd ConnectFour/frontend && npm run preview -- --host --port 10000
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: connect4-api
+          property: host
+
+  # --- Game 2 API (Python) ---
+  - type: web
+    name: wordle-api
+    env: python
+    plan: free
+    buildCommand: pip install -r InfinityWord/requirements.txt
+    startCommand: uvicorn InfinityWord.word_api:app --host 0.0.0.0 --port 10000
+
+  # --- Game 2 Frontend (React) ---
+  - type: web
+    name: wordle-web
+    env: node
+    plan: free
+    buildCommand: cd InfinityWord/frontend && npm install && npm run build
+    startCommand: cd InfinityWord/frontend && npm run preview -- --host --port 10000
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: wordle-api
+          property: host
+
+  # --- Arcade Hub (Static) ---
+  - type: web
+    name: arcade-hub
+    env: static
+    plan: free
+    buildCommand: echo "Static Site"
+    staticPublishPath: ./ArcadeHub
