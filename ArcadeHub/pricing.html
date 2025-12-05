@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCADE AI | VIP Access</title>
+    <style>
+        :root {
+            --neon-gold: #ffd700;
+            --bg-dark: #0a0a12;
+            --card-bg: #151520;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, #0a0a12 70%);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: var(--neon-gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .price {
+            font-size: 3rem;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .sub-price {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .card {
+            max-width: 400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--neon-gold);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: var(--neon-gold);
+            color: black;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .features {
+            text-align: left;
+            margin: 30px 0;
+            line-height: 2;
+            color: #ccc;
+        }
+
+        .feature-check {
+            color: var(--neon-gold);
+            margin-right: 10px;
+        }
+
+        .friction-text {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>ARCADE VIP</h1>
+        <p>Unlock the Full God-Mode Experiene</p>
+    </div>
+
+    <div class="card">
+        <div class="price">$4.99<span class="sub-price">/mo</span></div>
+        <p>Start your <strong>3-Day Free Trial</strong> today.</p>
+
+        <ul class="features">
+            <li><span class="feature-check">✔</span> <strong>No Ads</strong> (Interruption Free)</li>
+            <li><span class="feature-check">✔</span> <strong>God Mode AI</strong> (Unlock Max Difficulty)</li>
+            <li><span class="feature-check">✔</span> <strong>Unlimited Plays</strong> (Infinity Word)</li>
+            <li><span class="feature-check">✔</span> <strong>Priority Support</strong></li>
+        </ul>
+
+        <div style="margin-bottom: 20px;">
+            <input type="email" placeholder="Your Email"
+                style="width: 90%; padding: 15px; border-radius: 5px; border: 1px solid #333; background: #222; color: white;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <input type="text" placeholder="Card Number (Mock)"
+                style="width: 90%; padding: 15px; border-radius: 5px; border: 1px solid #333; background: #222; color: white;">
+        </div>
+
+        <button class="btn" onclick="startTrial()">START FREE TRIAL</button>
+
+        <p class="friction-text">Cancel anytime by contacting support (Response within 48h).</p>
+    </div>
+
+    <script>
+        async function startTrial() {
+            // AUTOMATED: Redirect to Stripe Secure Checkout
+            window.location.href = "https://buy.stripe.com/cNifZhcEVbHI7dp6GS6Vq01";
+        }
+    </script>
+
+</body>
+
+</html>

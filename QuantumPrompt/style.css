@@ -1,0 +1,493 @@
+:root {
+  --bg-color: #050510;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --text-color: #e0e0e0;
+  --accent-cyan: #00f3ff;
+  --accent-purple: #bd00ff;
+  --font-main: 'Outfit', sans-serif;
+  --font-tech: 'Rajdhani', sans-serif;
+  --glow-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.quantum-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1.glitch {
+  font-family: var(--font-tech);
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  text-shadow: 2px 2px var(--accent-purple), -2px -2px var(--accent-cyan);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-cyan);
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: var(--font-main);
+  resize: none;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+textarea:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--glow-shadow);
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+.quantum-btn {
+  background: transparent;
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  padding: 1rem 3rem;
+  font-family: var(--font-tech);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.quantum-btn:hover {
+  background: var(--accent-cyan);
+  color: #000;
+  box-shadow: 0 0 30px var(--accent-cyan);
+}
+
+/* Output Grid */
+.output-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.output-grid.hidden {
+  display: none;
+}
+
+.prompt-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.prompt-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 20px rgba(189, 0, 255, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.card-type {
+  font-family: var(--font-tech);
+  color: var(--accent-purple);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  white-space: pre-wrap;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.copy-btn:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes glitch-anim {
+  0% {
+    text-shadow: 2px 2px var(--accent-purple), -2px -2px var(--accent-cyan);
+  }
+
+  25% {
+    text-shadow: -2px 2px var(--accent-purple), 2px -2px var(--accent-cyan);
+  }
+
+  50% {
+    text-shadow: 2px -2px var(--accent-purple), -2px 2px var(--accent-cyan);
+  }
+
+  75% {
+    text-shadow: -2px -2px var(--accent-purple), 2px 2px var(--accent-cyan);
+  }
+
+  100% {
+    text-shadow: 2px 2px var(--accent-purple), -2px -2px var(--accent-cyan);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Particles Background (Simple Implementation) */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(189, 0, 255, 0.05) 0%, transparent 50%);
+}
+
+/* Comic Engine Overlay */
+.comic-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  /* Above everything */
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+
+  /* Input Section */
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .input-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: var(--font-main);
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  textarea:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-shadow);
+  }
+
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Button */
+  .quantum-btn {
+    background: transparent;
+    border: 2px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 1rem 3rem;
+    font-family: var(--font-tech);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .quantum-btn:hover {
+    background: var(--accent-cyan);
+    color: #000;
+    box-shadow: 0 0 30px var(--accent-cyan);
+  }
+
+  /* Output Grid */
+  .output-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .output-grid.hidden {
+    display: none;
+  }
+
+  .prompt-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  .prompt-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 20px rgba(189, 0, 255, 0.2);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+  }
+
+  .card-type {
+    font-family: var(--font-tech);
+    color: var(--accent-purple);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    white-space: pre-wrap;
+  }
+
+  .copy-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+
+  .copy-btn:hover {
+    color: #fff;
+  }
+
+  /* Animations */
+  @keyframes glitch-anim {
+    0% {
+      text-shadow: 2px 2px var(--accent-purple), -2px -2px var(--accent-cyan);
+    }
+
+    25% {
+      text-shadow: -2px 2px var(--accent-purple), 2px -2px var(--accent-cyan);
+    }
+
+    50% {
+      text-shadow: 2px -2px var(--accent-purple), -2px 2px var(--accent-cyan);
+    }
+
+    75% {
+      text-shadow: -2px -2px var(--accent-purple), 2px 2px var(--accent-cyan);
+    }
+
+    100% {
+      text-shadow: 2px 2px var(--accent-purple), -2px -2px var(--accent-cyan);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Particles Background (Simple Implementation) */
+  .particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(189, 0, 255, 0.05) 0%, transparent 50%);
+  }
+
+  /* Comic Engine Overlay */
+  .comic-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* Above everything */
+    background: rgba(5, 5, 16, 0.95);
+    /* Semi-transparent dark bg */
+    backdrop-filter: blur(5px);
+  }
+
+  .comic-overlay.hidden {
+    display: none !important;
+    /* Force hide */
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    h1.glitch {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    .input-section {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    textarea {
+      height: 120px;
+      font-size: 1rem;
+    }
+
+    .quantum-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .output-grid {
+      grid-template-columns: 1fr;
+      /* Stack cards */
+      padding: 0 1rem;
+    }
+
+    #app {
+      padding: 1rem 0;
+    }
+  }

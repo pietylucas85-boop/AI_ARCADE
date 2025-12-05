@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCADE SHOP | Customize Your Game</title>
+    <style>
+        :root {
+            --neon-pink: #bc13fe;
+            --neon-blue: #00f3ff;
+            --bg-dark: #0a0a12;
+            --card-bg: #151520;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.2);
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            color: var(--neon-blue);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn-buy {
+            background: transparent;
+            border: 2px solid var(--neon-pink);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            background: var(--neon-pink);
+        }
+
+        .vip-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: gold;
+            color: black;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="logo">ARCADE AI</div>
+        <a href="index.html" style="color: white; text-decoration: none;">Back to Hub</a>
+    </div>
+
+    <h1>The Shop</h1>
+    <p>Customize your experience. Included FREE with VIP.</p>
+
+    <div class="grid">
+        <!-- Avatars -->
+        <div class="item-card">
+            <div class="vip-badge">VIP ONLY</div>
+            <div class="icon">🐱</div>
+            <h3>Pixel Cat Avatar</h3>
+            <p>Your cute companion for stressful games.</p>
+            <div class="price">$2.99 (or Free with VIP)</div>
+            <button class="btn-buy" onclick="goVip()">Unlock</button>
+        </div>
+
+        <div class="item-card">
+            <div class="vip-badge">VIP ONLY</div>
+            <div class="icon">🧋</div>
+            <h3>Boba Tea Mode</h3>
+            <p>Chill vibes while you play.</p>
+            <div class="price">$1.99 (or Free with VIP)</div>
+            <button class="btn-buy" onclick="goVip()">Unlock</button>
+        </div>
+
+        <!-- Consumables -->
+        <div class="item-card">
+            <div class="vip-badge">HOT</div>
+            <div class="icon">⏪</div>
+            <h3>5x Undo Pack</h3>
+            <p>Made a mistake? Rewind time.</p>
+            <div class="price">$0.99 (or Free with VIP)</div>
+            <button class="btn-buy" onclick="goVip()">Get Pack</button>
+        </div>
+
+        <div class="item-card">
+            <div class="icon">🔮</div>
+            <h3>The Oracle</h3>
+            <p>See the perfect next move (3 Uses).</p>
+            <div class="price">$0.99 (or Free with VIP)</div>
+            <button class="btn-buy" onclick="goVip()">Get Pack</button>
+        </div>
+    </div>
+
+    <script>
+        function goVip() {
+            // Drive traffic to subscription
+            window.location.href = "pricing.html";
+        }
+    </script>
+</body>
+
+</html>

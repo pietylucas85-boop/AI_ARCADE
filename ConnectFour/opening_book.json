@@ -1,0 +1,35 @@
+{
+    "__comment": "Optimal opening moves for Connect Four. Column indices 0-6.",
+    "opening_moves": {
+        "______": {
+            "best_move": 3,
+            "score": 100,
+            "note": "Always take center. Mathematically solved win for Player 1."
+        },
+        "___X___": {
+            "best_move": 3,
+            "score": 50,
+            "note": "Stack on center to contest."
+        },
+        "__X____": {
+            "best_move": 3,
+            "score": 60,
+            "note": "Take center."
+        },
+        "____X__": {
+            "best_move": 3,
+            "score": 60,
+            "note": "Take center."
+        }
+    },
+    "responses": {
+        "center_response": [
+            3,
+            2,
+            4
+        ],
+        "flank_response": [
+            3
+        ]
+    }
+}

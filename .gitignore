@@ -1,0 +1,15 @@
+
+# .gitignore for Arcade AI
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.DS_Store
+node_modules/
+dist/
+build/
+*.log

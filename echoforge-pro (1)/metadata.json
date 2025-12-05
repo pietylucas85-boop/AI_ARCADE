@@ -1,0 +1,7 @@
+{
+  "name": "EchoForge Pro",
+  "description": "Local-first AI Voice Suite surpassing industry standards with 98% fidelity cloning, ultra-low latency TTS, and ethical watermarking.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

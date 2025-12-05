@@ -1,0 +1,49 @@
+
+version: '3.8'
+
+services:
+  # --- Game 1: Connect Four ---
+  connect4-api:
+    build: 
+      context: ./ConnectFour
+      dockerfile: Dockerfile.api
+    ports:
+      - "8001:8001"
+    environment:
+      - PORT=8001
+
+  connect4-web:
+    build:
+      context: ./ConnectFour/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80" # Maps container port 80 (nginx) to host 5173
+    depends_on:
+      - connect4-api
+
+  # --- Game 2: Infinity Word ---
+  wordle-api:
+    build:
+      context: ./InfinityWord
+      dockerfile: Dockerfile.api
+    ports:
+      - "8002:8002"
+    environment:
+      - PORT=8002
+
+  wordle-web:
+    build:
+      context: ./InfinityWord/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5175:80"
+    depends_on:
+      - wordle-api
+
+  # --- Hub ---
+  arcade-hub:
+    image: nginx:alpine
+    volumes:
+      - ./ArcadeHub:/usr/share/nginx/html
+    ports:
+      - "8080:80"

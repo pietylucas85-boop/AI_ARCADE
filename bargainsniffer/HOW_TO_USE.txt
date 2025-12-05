@@ -1,0 +1,13 @@
+# BargainSniffer - Demo Guide
+
+**What is this?**
+An AI-powered search engine that hunts for deals across multiple marketplaces (Facebook, Craigslist, etc.) simultaneously. It can even identify items from photos.
+
+**How to use:**
+1.  **Open the Link:** Go to the provided URL.
+2.  **Search:** Type something like "Vintage Herman Miller chair" or "PS5 console".
+3.  **Photo Search (Mobile):** Click the camera icon and take a picture of an item. The AI will identify it and search for listings.
+4.  **Filters:** Use the filter bar to set price ranges or distance.
+5.  **Watchlist:** Click the "Heart" icon on any item to add it to your watchlist for price drop alerts (simulated).
+
+**Note:** In this demo version, search results may be simulated if live API keys are not configured.

@@ -1,0 +1,7 @@
+{
+  "name": "DigiMaster Suite",
+  "description": "The ultimate integration of Quantum Promptanator and Taskanator. A unified dashboard for high-level AI reasoning and autonomous task management.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Prompt | The Rosetta Stone of AI</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#050510">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header class="quantum-header">
+      <h1 class="glitch" data-text="QUANTUM PROMPT">QUANTUM PROMPT</h1>
+      <p class="subtitle">The Rosetta Stone for Humanity & Technology</p>
+    </header>
+
+    <main class="quantum-main">
+      <section class="input-section">
+        <div class="input-container">
+          <textarea id="userInput"
+            placeholder="Enter your raw thought here... (e.g., 'i want a logo for my coffee shop')"
+            spellcheck="false"></textarea>
+          <div class="glow-effect"></div>
+        </div>
+        <button id="translateBtn" class="quantum-btn">
+          <span class="btn-content">QUANTUM TRANSLATE</span>
+          <span class="btn-glitch"></span>
+        </button>
+      </section>
+
+      <section id="outputSection" class="output-grid hidden">
+        <!-- Cards will be injected here by JS -->
+      </section>
+    </main>
+
+    <div class="particles" id="particles"></div>
+    <canvas id="comicCanvas" class="comic-overlay hidden"></canvas>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg))
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+
+</html>

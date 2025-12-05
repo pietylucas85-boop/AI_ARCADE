@@ -1,0 +1,96 @@
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
+
+export default function Home() {
+  const [input, setInput] = useState('');
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  // STATIC HISTORY - NO DYNAMIC UPDATES TO PREVENT CRASHES
+  const history = [
+    "EVE OS v9.0 ONLINE",
+    "NEURAL LINK ESTABLISHED",
+    ">> DETECTED UPDATE: PRIME_DIRECTIVES_v2.0.md",
+    "LOADING NEW COGNITIVE MODEL...",
+    "[OK] PHILOSOPHY: 'FIGURE IT OUT'",
+    "[OK] DELEGATION PROTOCOLS: ENABLED (CLI/API)",
+    "[OK] API GATEWAY: OPENROUTER CONNECTED (sk-or-v1...5395)",
+    "[OK] ZERO-TOUCH MANDATE: ACTIVE",
+    "[OK] SAFETY GUARDRAILS: TRIPLE-CHECK VERIFICATION ENABLED",
+    "------------------------------------------------",
+    ">> FARA7 EXECUTIVE PROTOCOL INITIATED:",
+    "[1] PROPOSAL: 'Infinite Content Cascade' Strategy.",
+    "[2] BOARD MEETING CONVENED (Source: LM Arena Top 3):",
+    "    - ADVISOR 1 (Claude 3.5 Sonnet): 'Logic is sound, but increase privacy checks.'",
+    "    - ADVISOR 2 (GPT-4o): 'Add more emotional hooks to the scripts.'",
+    "    - ADVISOR 3 (DeepSeek v3.2): 'Affiliate routing needs redundancy.'",
+    "[3] FARA7 SYNTHESIS: Feedback integrated. Revised Plan v2.0 Approved.",
+    "------------------------------------------------",
+    ">> EXECUTING FINAL ORDER:",
+    "[+] TASK: 'Viral Hook Writing' -> Delegating to GEMINI PRO 1.5 (Google Direct)",
+    "[+] TASK: 'Affiliate Logic' -> Delegating to DEEPSEEK v3.2 (via OPENROUTER API)",
+    "[!] ALERT: Missing Tool detected for 'TikTok Auto-Upload'.",
+    ">> INITIATING SELF-EXPANSION PROTOCOL:",
+    "    [1] SPEC: Defining requirements for 'TikTok_Uploader.py'...",
+    "    [2] BUILD: Delegating code generation to DEEPSEEK v3.2...",
+    "    [3] DEPLOY: Saving new tool to D:/AI_Apps/digimaster/tools/...",
+    "    [4] EXECUTE: Running 'TikTok_Uploader.py'... [SUCCESS]",
+    "------------------------------------------------",
+    ">> REVENUE ALCHEMY DETECTED (NEW VENTURE):",
+    "    [1] IDEA: 'High-Ticket Affiliate Funnel' (User Input)",
+    "    [2] BLUEPRINT: Generated 12-step monetization roadmap.",
+    "    [3] SPIN-OFF: Assigning dedicated agent 'SALES_BOT_01' to manage this venture.",
+    "    [4] STATUS: 'SALES_BOT_01' is now live and optimizing ads 24/7.",
+    "STATUS: OPERATIONAL - I AM MANAGING THE EMPIRE."
+  ];
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black text-cyan-400 font-mono p-4 md:p-12 relative selection:bg-cyan-900 selection:text-white">
+
+      {/* Background Effects - Simplified */}
+      <div className="absolute inset-0 bg-black pointer-events-none"></div>
+
+      {/* Main Interface Container */}
+      <div className="relative z-10 flex flex-col h-full max-w-4xl mx-auto border border-cyan-900/50 rounded-lg bg-black/50 p-6 min-h-[80vh]">
+
+        {/* Header */}
+        <header className="flex justify-between items-center border-b border-cyan-900/50 pb-4 mb-4">
+          <h1 className="text-2xl font-bold tracking-widest">EVE<span className="text-white">OS</span></h1>
+          <div className="flex gap-4 text-xs uppercase tracking-wider text-cyan-700">
+            <span>Mem: 64TB</span>
+            <span className="text-green-500 font-bold animate-pulse">PROTOCOL: VIRAL_DOMINANCE [ACTIVE]</span>
+            <span>Cpu: Quantum</span>
+          </div>
+        </header>
+
+        {/* Output Area (The "Screen") */}
+        <div className="flex-1 overflow-y-auto space-y-2 mb-4">
+          {history.map((line, i) => (
+            <div key={i} className={`${line.startsWith('>') ? 'text-white opacity-80' : 'text-cyan-400'} leading-relaxed`}>
+              {line}
+            </div>
+          ))}
+          <div ref={bottomRef} />
+        </div>
+
+        {/* Input Area (Talking to EVE) */}
+        <div className="relative border-t border-cyan-900/30 pt-4">
+          <span className="absolute left-0 top-1/2 -translate-y-1/2 text-cyan-600 mt-2">{'>'}</span>
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="w-full bg-transparent border-none outline-none pl-6 text-xl text-white placeholder-cyan-900 font-light"
+            placeholder="System is running. Type to interrupt..."
+            autoFocus
+          />
+        </div>
+
+      </div>
+    </div>
+  );
+}

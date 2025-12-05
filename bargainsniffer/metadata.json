@@ -1,0 +1,8 @@
+{
+  "name": "BargainSniffer",
+  "description": "An AI-powered local marketplace aggregator that helps you find the best deals by analyzing images or text descriptions using Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

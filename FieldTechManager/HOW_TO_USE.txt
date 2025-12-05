@@ -1,0 +1,18 @@
+# Field Tech Manager - Demo Guide
+
+**What is this?**
+This is a mobile-first app designed for field technicians to manage inventory, jobs, and quality control using AI voice commands.
+
+**How to use:**
+1.  **Open the Link:** Go to the provided URL on your phone or desktop.
+2.  **Simulation Mode:** Since this is a demo, it runs in "Simulation Mode". You don't need to log in.
+3.  **Try Voice Commands:**
+    *   Click the microphone icon.
+    *   Say things like: "I need 500 feet of drop cable" or "Check my inventory for ONTs".
+    *   The AI will simulate a response and update the screen.
+4.  **Quality Control:**
+    *   Go to the "QC" tab.
+    *   Upload a photo (or take one if on mobile).
+    *   The AI analyzes it for safety compliance (simulated for this demo).
+
+**Note:** This is a prototype to demonstrate the Voice-to-Action capabilities.

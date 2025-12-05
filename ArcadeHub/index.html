@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCADE AI | The Future of Gaming</title>
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-pink: #bc13fe;
+            --bg-dark: #0a0a12;
+            --card-bg: #151520;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 60px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+            border-color: var(--neon-blue);
+        }
+
+        .card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--neon-blue), #005bea);
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: filter 0.2s;
+        }
+
+        .btn:hover {
+            filter: brightness(1.2);
+        }
+
+        .tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--neon-blue);
+        }
+
+        /* Floating background elements */
+        .bg-orb {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(188, 19, 254, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+            top: -100px;
+            left: -100px;
+            z-index: -1;
+            animation: float 10s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(50px, 50px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-orb"></div>
+
+    <div class="container">
+        <h1>Arcade AI</h1>
+        <p class="subtitle">Next-Gen Gaming Powered by Artificial Intelligence</p>
+
+        <div style="margin-bottom: 40px;">
+            <a href="shop.html" class="btn"
+                style="background: transparent; border: 1px solid #bc13fe; color: white;">🛍️ Visit Shop</a>
+            <a href="pricing.html" class="btn" style="background: gold; color: black; margin-left: 10px;">👑 Get VIP
+                Access</a>
+        </div>
+
+        <div class="grid">
+            <!-- Game 1 -->
+            <div class="card">
+                <div class="tag">STRATEGY</div>
+                <h2>Space Connect</h2>
+                <p>Battle against the "Grok" Neural Engine. Can you link 4 in a row before the AI outsmarts you?</p>
+                <a href="http://localhost:5173" target="_blank" class="btn">Play Now</a>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="card">
+                <div class="tag">VIRAL</div>
+                <h2>Infinity Word</h2>
+                <p>The daily puzzle, unlocked. Play unlimited rounds with no waiting. Test your vocabulary.</p>
+                <a href="http://localhost:5175" target="_blank" class="btn">Play Now</a>
+            </div>
+
+            <!-- Coming Soon -->
+            <div class="card" style="opacity: 0.5;">
+                <div class="tag">COMING SOON</div>
+                <h2>Project Triumph</h2>
+                <p>Real-money skill tournaments. High stakes, pure skill. The next revolution.</p>
+                <a href="#" class="btn" style="background: #333; color: #666; cursor: default;">Locked</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+# Artist Portfolio Creator - Demo Guide
+
+**What is this?**
+This app builds a professional artist portfolio website in seconds using AI. It writes your bio, categorizes your art, and designs the layout automatically.
+
+**How to use:**
+1.  **Open the Link:** Go to the provided URL.
+2.  **Enter Details:** Type your name (or a persona name) and a short description of your art style (e.g., "Abstract expressionism with a focus on urban decay").
+3.  **Upload or Generate:**
+    *   **Upload:** If you have art files, upload them.
+    *   **Generate:** If not, check "Use AI Placeholders" to let the AI create sample art for you.
+4.  **Create:** Click the button and watch the site build itself.
+5.  **Explore:** Scroll through your new portfolio. The "About Me" and "Artist Statement" are all written by AI based on your short description.
+
+**Note:** This is a demo. The portfolio is generated instantly in your browser.
+this is only a demo an idea it is not permenant. I am hoping you will play with it and give me ideas on how to make it better.

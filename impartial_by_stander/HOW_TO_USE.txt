@@ -1,0 +1,16 @@
+# Impartial By Stander - Demo Guide
+
+**What is this?**
+An AI mediator designed to help resolve conflicts. It listens to both sides of an argument and provides unbiased, constructive feedback to help find common ground.
+
+**How to use:**
+1.  **Open the Link:** Go to the provided URL.
+2.  **Start Session:** Click "Start Mediation".
+3.  **Voice Interaction:**
+    *   The AI will introduce itself and ask for the first person's perspective.
+    *   Speak your side of the story.
+    *   The AI will acknowledge and then ask the second person to speak.
+4.  **Analysis:** After hearing both sides, the AI will offer a summary and suggest potential compromises or "impartial" observations.
+5.  **Journal:** You can view a transcript and summary of the mediation in the "Journal" tab.
+
+**Note:** This is a demo of AI-assisted conflict resolution.

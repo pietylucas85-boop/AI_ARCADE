@@ -1,0 +1,7 @@
+{
+  "name": "Impartial_BY_Stander",
+  "description": "An empathetic, secure, and helpful chat interface for users to discuss their relationship challenges, backed by guided exercises and a private journal.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

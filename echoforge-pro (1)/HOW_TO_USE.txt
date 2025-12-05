@@ -1,0 +1,15 @@
+# EchoForge Pro - Demo Guide
+
+**What is this?**
+A professional voice cloning and audio synthesis studio. It allows you to clone voices, generate speech from text, and manage AI voice agents.
+
+**How to use:**
+1.  **Open the Link:** Go to the provided URL.
+2.  **Studio Tab:** Select a voice from the list (e.g., "Zephyr" or "Nova"). Type text into the box and click "Generate" to hear it spoken.
+3.  **Cloning Tab:**
+    *   Upload a short audio clip (10-30 seconds) of a voice.
+    *   Name the voice.
+    *   The AI will clone it, and you can then use it in the Studio.
+4.  **Agent Tab:** Interact with an AI voice agent that responds in real-time (simulated for demo).
+
+**Note:** This is a powerful tool. Please use voice cloning responsibly.

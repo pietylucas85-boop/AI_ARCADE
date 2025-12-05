@@ -1,0 +1,27 @@
+{
+    "name": "stick-skit",
+    "version": "1.0.0",
+    "description": "The Anti-Boredom Protocol: Adaptive Stick Figure Loading Screens",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "react",
+        "loader",
+        "spinner",
+        "stick-figure",
+        "comedy"
+    ],
+    "author": "Agentic Eve",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^18.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "@types/react": "^18.0.0"
+    }
+}
