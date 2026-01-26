@@ -1,0 +1,6 @@
+[server]
+port = 8501
+baseUrlPath = "arcade"
+enableCORS = false
+enableXsrfProtection = false
+headless = true
